@@ -1,0 +1,6 @@
+---
+Name: dataobjectextension
+---
+SilverStripe\ORM\DataObject:
+  extensions:
+    - SwiftDevLabs\SilverStripeValitron\Extension\DataObjectExtension
