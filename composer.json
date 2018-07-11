@@ -6,7 +6,7 @@
         "vlucas/valitron": "^1.4",
         "silverstripe/framework": "^4.1"
     },
-    "license": "GNU",
+    "license": "MIT",
     "authors": [
         {
             "name": "Kong Jin Jie",
