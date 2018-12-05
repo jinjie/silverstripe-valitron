@@ -1,18 +1,29 @@
 # Better Validation for SilverStripe
 
-DataObject validation using vlucas/valitron.
+A very simple validation that make use of Valitron. Provides a helper that add error messages to form fields.
 
 ```php
-public function getValitron()
-{
-    $v = new Valitron\Validator([
-        'Title' => $this->Title,
-    ]);
+use SilverStripe\ORM\DataObject;
+use SwiftDevLabs\Valitron\Helper;
 
-    $v->rule('required', [
-        'Title',
-    ]);
-    
-    return $v;
+class MyDataObject extends DataObject {
+    // Validates DataObject
+    public function validate()
+    {
+        $result = parent::validate();
+
+        $v = new \Valitron\Validator([
+            'Field1'    => $this->Field1,
+            'Field2'    => $this->Field2,
+        ]);
+
+        // Find more rules at https://github.com/vlucas/valitron
+        $v->rule('required', [
+            'Field1',
+            'Feild2',
+        ]);
+
+        return Helper::validate($v, $result);
+    }
 }
 ```
