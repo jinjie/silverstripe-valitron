@@ -1,7 +1,7 @@
 {
     "name": "jinjie/silverstripe-valitron",
     "description": "Better SilverStripe DataObject Validation With Valitron",
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "require": {
         "vlucas/valitron": "^1.4",
         "silverstripe/framework": "^4"
