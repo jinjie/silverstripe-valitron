@@ -19,7 +19,7 @@ class Helper
      * @param  ValidationResult    $result [description]
      * @return ValidationResult            [description]
      */
-    public function validate(\Valitron\Validator $v, ValidationResult $result)
+    public static function validate(\Valitron\Validator $v, ValidationResult $result)
     {
         if ($v->validate()) {
             return $result;
